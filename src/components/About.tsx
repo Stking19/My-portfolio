@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="h-screen bg-black flex items-center justify-center text-white relative"
+      className="h-screen max-sm:h-[600px] bg-black flex items-center justify-center text-white relative"
     >
       {/* Content container */}
       <motion.div

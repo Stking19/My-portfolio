@@ -23,7 +23,7 @@ const projects = [
     title: "Portfolio Website",
     description: "Personal portfolio built with Next.js, TailwindCSS.",
     tech: ["Next.js", "TypeScript", "TailwindCSS"],
-    github: "https://github.com/yourusername/portfolio",
+    github: "https://github.com/Stking19/My-portfolio",
     demo: "#",
   },
   {
@@ -63,7 +63,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative w-full h-[760px] overflow-hidden"
+      className="relative w-full h-[760px] max-sm:h-screen overflow-hidden"
     >
       {img.map((src, index) => (
         <div
@@ -75,7 +75,7 @@ export default function Projects() {
         ></div>
       ))}
 
-      <div className="relative z-10 h-[80vh] bg-black flex flex-col items-center justify-center text-white px-6 py-20">
+      <div className="relative z-10 h-[80vh] max-sm:h-[60vh] bg-black flex flex-col items-center justify-center text-white px-6 py-20">
         <motion.h2
           className="text-4xl font-bold text-cyan-400 drop-shadow-lg mb-12"
           initial={{ opacity: 0, y: 50 }}

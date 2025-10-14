@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative w-full h-[80vh] bg-black text-white flex items-center justify-center px-10 py-20"
+      className="relative w-full h-[80vh] max-sm:h-[100%] bg-black text-white flex items-center justify-center px-10 py-20"
     >
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE */}

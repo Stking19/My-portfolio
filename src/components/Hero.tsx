@@ -22,7 +22,7 @@ export default function HeroAI() {
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative text-5xl md:text-7xl font-extrabold mb-4 tracking-wide"
+        className="relative text-4xl md:text-7xl font-extrabold mb-4 tracking-wide"
       >
         Building <span className="text-cyan-400">AI-Driven</span> Interfaces
       </motion.h1>
