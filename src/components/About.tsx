@@ -1,23 +1,15 @@
 "use client";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="h-screen max-sm:h-[600px] bg-black flex items-center justify-center text-white relative"
+      className="relative w-full min-h-screen bg-gradient-to-b from-[#05060A] to-[#0B0F1A] flex items-center justify-center text-white py-20 px-6"
     >
-      {/* Content container */}
-      <motion.div
-        className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-6"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
+      <div className="max-w-5xl w-full flex flex-col items-center text-center space-y-8">
         {/* Avatar */}
-        <div className="relative w-36 h-36 rounded-full overflow-hidden border-4 border-cyan-400 shadow-[0_0_25px_#00E5FF]">
+        <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-cyan-400 shadow-[0_0_30px_#00E5FF66]">
           <Image
             src="/IMG/main-profile.jpg"
             alt="Stephen Okoli"
@@ -26,36 +18,42 @@ export default function About() {
           />
         </div>
 
-        {/* Headline */}
-        <h2 className="text-4xl font-bold text-cyan-400 drop-shadow-lg">
+        {/* Title */}
+        <h2 className="text-4xl md:text-5xl font-bold text-cyan-400">
           About Me
         </h2>
 
         {/* Description */}
-        <p className="text-lg gap-1 text-gray-300 leading-relaxed max-w-2xl">
-          Hi, I’m <span className="text-cyan-400 font-semibold">Stephen Okoli</span>, 
-          a passionate <span className="text-purple-400 font-semibold mr-1.5">Frontend Developer</span> 
-          who loves building modern, interactive, and user-friendly web & mobile apps.  
-          I work with <span className="text-cyan-300">React</span>, <span className="text-cyan-300">Next.js</span>, and 
-          <span className="text-cyan-300"> Tailwind CSS</span> to create seamless digital experiences.
+        <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl">
+          Hey, I’m{" "}
+          <span className="text-cyan-400 font-semibold">Stephen Okoli</span>, a{" "}
+          <span className="text-purple-400 font-semibold">
+            Frontend Developer
+          </span>{" "}
+          passionate about building sleek, responsive, and interactive digital
+          experiences. I blend creativity and logic to craft{" "}
+          <span className="text-cyan-300">AI-inspired</span> interfaces that
+          connect design and technology seamlessly.
         </p>
 
-        {/* Skills (can edit / expand later) */}
-        <div className="flex gap-6 mt-4 flex-wrap justify-center">
-          <span className="px-4 py-2 rounded-xl bg-[#0A0F1C]/70 border border-cyan-500/40 shadow-[0_0_15px_#00E5FF33] text-sm">
-            React.js
-          </span>
-          <span className="px-4 py-2 rounded-xl bg-[#0A0F1C]/70 border border-cyan-500/40 shadow-[0_0_15px_#00E5FF33] text-sm">
-            Next.js
-          </span>
-          <span className="px-4 py-2 rounded-xl bg-[#0A0F1C]/70 border border-cyan-500/40 shadow-[0_0_15px_#00E5FF33] text-sm">
-            TypeScript
-          </span>
-          <span className="px-4 py-2 rounded-xl bg-[#0A0F1C]/70 border border-cyan-500/40 shadow-[0_0_15px_#00E5FF33] text-sm">
-            Tailwind CSS
-          </span>
+        {/* Skill Pills */}
+        <div className="flex flex-wrap justify-center gap-4 mt-4">
+          {[
+            "React.js",
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="px-4 py-2 rounded-xl bg-[#0A0F1C]/70 border border-cyan-500/40 shadow-[0_0_15px_#00E5FF33] text-sm font-medium text-gray-200 hover:text-cyan-400 transition"
+            >
+              {skill}
+            </span>
+          ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

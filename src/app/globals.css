@@ -5,6 +5,19 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-behavior: smooth;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+* {
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
